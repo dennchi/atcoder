@@ -9,7 +9,7 @@ int main() {
       cout << -1 <<endl;
   }else if(K % 7 == 0){
       K = K/7;
-      for (long long i = 0; i < 10000000; i++){
+      for (long long i = 0; i < K; i++){
            num += 1 * pow(10,i);
            if (num % K == 0) {
                cout << i+1 <<endl;
@@ -17,7 +17,7 @@ int main() {
            }
       }
   }else{
-      for (long long i = 0; i < 10000000; i++){
+      for (long long i = 0; i < K; i++){
            num += 7 * pow(10,i);
            if (num % K == 0) {
                cout << i+1 <<endl;
