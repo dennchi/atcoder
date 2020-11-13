@@ -7,24 +7,17 @@ int main() {
 
   long long count = 0;
   long long cul = 0;
-  long long num = 0;
-  long long N_pre = N;
 
-  for (long long i = 0; i < N; i++) {
-     N_pre -= 1;
-     cul = sqrt(N_pre);
-     for (long long j = 1; j < cul+1; j++) {
-         if (N_pre % j == 0) {
-             num = N_pre / j;
-             if(num != j){
-                count += 2; 
-             }else{
-                count += 1;
-             }
-         }
-     }
-  }  
-   cout << count <<endl;
-}
+  for (long i = 1; i < N; i++){
+      cul = N / i;
+      if (N != cul * i) {
+         count += cul;
+      }else{
+         count += cul - 1;
+      }
+     
+  }
+cout << count <<endl;
+  }
 
     
