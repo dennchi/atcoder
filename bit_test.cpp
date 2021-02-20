@@ -2,14 +2,13 @@
 using namespace std;
  
 int main() {
- string S;
- cin >> S;
- int n = 3;
+    int n = 3;
 
-  for (int bit = 0; bit < (1<<n); bit++) {
-      vector<int> L;
+    // {0, 1, ..., n-1} の部分集合の全探索
+    for (int bit = 0; bit < (1<<n); ++bit) {
+        vector<int> S;
         for (int i = 0; i < n; ++i) {
-            if (bit & (1<<i)) {
+            if (bit & (1<<i)) { // 列挙に i が含まれるか
                 S.push_back(i);
             }
         }
@@ -20,5 +19,4 @@ int main() {
         }
         cout << "}" << endl;
     }
-     
 }
