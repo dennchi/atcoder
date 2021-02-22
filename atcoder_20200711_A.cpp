@@ -11,6 +11,5 @@ int main() {
         count += 1;
     }
   }
-     
     cout << count <<endl;
 }
